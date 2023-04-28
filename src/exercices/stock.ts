@@ -33,12 +33,12 @@ const products: ProductT[] = [
   {
     name: 'Pasta dental',
     price: 1000,
-    stock: 100,
+    stock: 0,
   },
 ];
 
 const hasStockList = (products: ProductT[]): boolean[] => {
-  return [];
+  return products.map((product: ProductT) => product?.stock > 0);
 };
 
 const productsHasStock = hasStockList(products);

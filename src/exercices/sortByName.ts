@@ -38,7 +38,9 @@ const products: ProductT[] = [
 ];
 
 const sortProductByTitle = (products: ProductT[]): ProductT[] => {
-  return [];
+  return products?.sort((product1: ProductT, product2: ProductT) =>
+    product1?.title > product2?.title ? 1 : -1
+  );
 };
 
 const sortProducts: ProductT[] = sortProductByTitle(products);

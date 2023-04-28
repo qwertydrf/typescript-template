@@ -38,7 +38,11 @@ const products: ProductT[] = [
 ];
 
 const getOnlyNameProduct = (products: ProductT[]): Partial<ProductT>[] => {
-  return [];
+  return products?.map((product: ProductT) => {
+    return {
+      title: product?.title,
+    };
+  });
 };
 
 const onlyNameProduct: Partial<ProductT>[] = getOnlyNameProduct(products);

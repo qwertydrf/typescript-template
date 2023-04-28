@@ -37,14 +37,13 @@ const products: ProductT[] = [
   },
 ];
 
-const getProduct = (find: string, products: ProductT[]): ProductT => {
-  return {
-    title: '',
-    price: 0,
-    stock: 0,
-  };
+const getProduct = (
+  find: string,
+  products: ProductT[]
+): ProductT | undefined => {
+  return products.find((product: ProductT) => product?.title === find);
 };
 
-const findedProduct: ProductT = getProduct('Calefactor', products);
+const findedProduct = getProduct('Calefactor', products) as ProductT;
 
 export { findedProduct };
