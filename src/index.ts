@@ -11,3 +11,4 @@ console.log('03. findedProduct', findedProduct);
 console.log('04. onlyNameProduct', onlyNameProduct);
 console.log('05. sortByName', sortProducts);
 console.log('06. sortByName', getProducts());
+console.log('06. sortByName', getProducts());
